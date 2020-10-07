@@ -42,7 +42,7 @@ export function fetchComments(postId) {
         `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
       )
       const data = await response.json()
-
+       console.log('comments', data);
       dispatch(getCommentsSuccess(data))
     } catch (error) {
       dispatch(getCommentsFailure())
